@@ -26,7 +26,7 @@
 /* BEM */
 
 /** \defgroup aca aca
- *  @brief This modules provides different kind of adaptive cross approximation
+ *  @brief These modules provide different kinds of adaptive cross approximation
  *  techniques.
  *  @{ */
 
@@ -89,8 +89,8 @@ HEADER_PREFIX void decomp_fullaca_rkmatrix(pamatrix A, const real accur,
  * @f]
  *
  * @param entry This callback function implicitly defines the matrix @f$ A @f$.
- * It take two arrays of row and column indices, a void-pointer to some data-object
- * needed for computing matrix entries and a flag determined whether we want
+ * It takes two arrays of row and column indices, a void-pointer to some data-object
+ * needed for computing matrix entries and a flag determining whether we want
  * entries of the original or of the transposed matrix @f$ A @f$. Length of <tt>
  * ridx</tt> and <tt>cidx</tt> is determined by the rows and columns of matrix
  * <tt>A</tt>.
@@ -121,7 +121,7 @@ decomp_partialaca_rkmatrix(matrixentry_t entry, void *data,
  * @brief Copies the lower triangular part of a matrix <tt>A</tt> to a matrix <tt>B</tt>
  * after applying the row pivoting denoted by <tt>xi</tt>.
  *
- * for @f$ A \in \mathbb R^{\ell \times m}@f$ and
+ * For @f$ A \in \mathbb R^{\ell \times m}@f$ and
  * @f$ B \in \mathbb R^{n \times m}@f$ with @f$ \ell \geq n@f$ it holds
  *
  * @f[
@@ -133,11 +133,11 @@ decomp_partialaca_rkmatrix(matrixentry_t entry, void *data,
  *        corresponding entry of <tt>A</tt>.
  * @param A Source matrix.
  * @param xi Array denoting the row permutation.
- * @param B Target matrix containing the lower triangular part of <tt>A</tt> with
- * respect to <tt>xi</tt>.
+ * @param B Target matrix containing the lower triangular part of
+ *          <tt>A</tt> permuted according to <tt>xi</tt>.
  *
- * @attention The rows of <tt>B</tt> has to match the length of the array
- * <tt>xi</tt>.
+ * @attention The number of rows of <tt>B</tt> has to match the length
+ * of the array <tt>xi</tt>.
  */
 HEADER_PREFIX void
 copy_lower_aca_amatrix(bool unit, pcamatrix A, uint *xi, pamatrix B);
@@ -146,7 +146,7 @@ copy_lower_aca_amatrix(bool unit, pcamatrix A, uint *xi, pamatrix B);
  * @brief Copies the upper triangular part of a matrix <tt>A</tt> to a matrix <tt>B</tt>
  * after applying the row pivoting denoted by <tt>xi</tt>.
  *
- * for @f$ A \in \mathbb R^{\ell \times m}@f$ and
+ * For @f$ A \in \mathbb R^{\ell \times m}@f$ and
  * @f$ B \in \mathbb R^{n \times m}@f$ with @f$ \ell \geq n@f$ it holds
  *
  * @f[
@@ -158,10 +158,10 @@ copy_lower_aca_amatrix(bool unit, pcamatrix A, uint *xi, pamatrix B);
  *        corresponding entry of <tt>A</tt>.
  * @param A Source matrix.
  * @param xi Array denoting the row permutation.
- * @param B Target matrix containing the upper triangular part of <tt>A</tt> with
- * respect to <tt>xi</tt>.
+ * @param B Target matrix containing the upper triangular part of <tt>A</tt> permuted
+ *          according to <tt>xi</tt>.
  *
- * @attention The rows of <tt>B</tt> has to match the length of the array
+ * @attention The number of rows of <tt>B</tt> has to match the length of the array
  * <tt>xi</tt>.
  */
 HEADER_PREFIX void
