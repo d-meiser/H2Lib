@@ -256,10 +256,10 @@ read_netgen_surface3d(const char *filename);
  * @brief Apply a red refinement to a surface mesh.
  *
  * The surface mesh is globally refined with a red refinement resulting in a
- * mesh having four times as much triangles as the input mesh.
+ * mesh having four times as many triangles as the input mesh.
  *
  * @param in Surface to be refined.
- * @return A new @ref surface3d object is returned which is a red refinement from
+ * @return A new @ref surface3d object is returned which is a red refinement of
  * the input surface mesh.
  */
 HEADER_PREFIX psurface3d
